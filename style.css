@@ -1,0 +1,180 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f0ea;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.logo {
+    color: #0c1a3a;
+}
+
+/* Menu icon */
+.menu {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Desktop nav */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #0c1a3a;
+    font-size: 18px;
+}
+
+
+/* ---------- MOBILE POPUP MENU ---------- */
+@media (max-width: 768px) {
+
+    .menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        width: 180px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        animation: popup 0.3s ease-out;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* POPUP animation */
+@keyframes popup {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h3 {
+    font-size: 20px;
+    color: #444;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #0c1a3a;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 22px;
+    color: #9b1c1c;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #444;
+    width: 90%;
+    margin: auto;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    margin: 8px;
+}
+
+.blue { background: #0c1a3a; }
+.green { background: #006400; }
+
+/* Avatar */
+.avatar img {
+    margin-top: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 6px solid black ;
+}
+/* HIDE MENU BY DEFAULT FOR ALL SCREENS */
+.nav-links {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #fff;
+    padding: 20px;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: popup 0.3s ease-out;
+    z-index: 100;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #0c1a3a;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* When active class applied → show popup */
+.nav-links.active {
+    display: flex;
+}
+
+/* Hamburger icon always visible */
+.menu {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Popup animation */
+@keyframes popup {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
