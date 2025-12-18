@@ -135,6 +135,7 @@ nav {
     height: 200px;
     border-radius: 50%;
     border: 6px solid black ;
+    OBJECT-FIT:COVER
 }
 /* HIDE MENU BY DEFAULT FOR ALL SCREENS */
 .nav-links {
