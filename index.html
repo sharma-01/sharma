@@ -1,166 +1,677 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharti Sharma | Portfolio</title>
+    <meta http-equiv="X-UA-compatible"content="ie-edge">   
+    <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+      * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 700px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position:absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: 20x;
+          color: black;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(245, 81, 81, 0.8);
+        }
+        /* Caption text */
+        .text {
+          color:black;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color:rgba(0, 0, 0, 0.774);
+          font-size: 14px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #0a0101;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active, .dot:hover {
+          background-color: #9c0202;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .prev, .next,.text {font-size: 11px}
+        }
+        
+        </style>
+        
+    <title>yoga website</title>
+    
+        <header class="main-header">
+            <div class="header-nav">
+                <a href="#" class="logo link">YOGA</a>
+                <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="classes.html" class="nav-link link">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link link">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link link">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link link">Blogs</a>
+                    
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link link">Login</a>
+                    
+                    </li>
+                    
+                    </ul>
+                    </nav>
+                    <!-- <li class="nav-item">
+                        <a href="#" class="nav-link link"><i class ="fas fa-search"></i></a>
+                    </li> -->
+                 </div>
+   
+                 <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="img/bhujangsana.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img/bhujangsana.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img/Dhanurasana.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    
+    
+    <!-- <script>
+        let slideIndex = 1;matapitajanat
+        showSlides(slideIndex);
+
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+         -->
+   
+    <!-- <div class="hero-content">
+        <h1  class="main-heading">"Yoga is the journey <span class="main-heading-focus"> of <br> The self, <br> To the self, <br> Through the self"</span></h1>
+        <p class="sub-heading">Bhagvad Gita</p>
+        
+        
+        </div> -->
+       
+        </head>
+        <body>
+            
+    </header>
+    <main class="main-container">
+        <div class="card-container">
+            <p class="main-card-title">IT REALLY HELPS</p>
+            <div class="card-content">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="img/natrajasana.jpg"width="350" height="400" alt=""class="card-img">
+                    <div class="card-info">
+                        <ul class="card-info-list">
+                        <li class="card-info-item">It is a balancing,back-bending yoga pose.</li>
+                        <li class="card-info-item">It is also called the lord of dance pose yoga.</li>
+                        <li class="card-info-item">It helps to stretch the legs,knees,chest,neck,abdomen.</li>
+                        <li class="card-info-item">It may develop more flexibility in your hamstrings,spine and shoulders.</li>
+                    </ul>
+</div>
+</div>
+                <p class="card-title">NATRAJASANA<span class="card-span">(Lord of the dance pose)</span></p>
+            </div>
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="img/Dhanurasana.jpg"width="350" height="400" alt=""class="card-img">
+                    <div class="card-info">
+                        <ul class="card-info-list">
+                        <li class="card-info-item">It helps to strengthen the back muscles.</li>
+                        <li class="card-info-item">It is a back bending asana.</li>
+                        <li class="card-info-item">It improves the strength in your ankles,thighs,chest,neck and shoulders .</li>
+                        <li class="card-info-item">It improves the blood circulation.</li>
+                        <li class="card-info-item">It gives the flexibility to the back.</li>
+                    </ul>
+</div>
+                </div>
+                <p class="card-title">DHANURASANA<span class="card-span">(Bow pose)</span></p>
+            </div>
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="img/bhujangsana.jpg"width="350" height="400" alt="" class="card-img">
+                    <div class="card-info">
+                        <ul class="card-info-list">
+                        <li class="card-info-item">It may help to tone the abdomen and improve blood circulation.</li>
+                        <li class="card-info-item">It may improve the digestion.</li>
+                        <li class="card-info-item">It strengthens both the spiritual and physical health.</li>
+                        <li class="card-info-item">It may improves the lower back pain.</li>
+                        <li class="card-info-item">It may reduce the symtoms of depression.</li>
+
+                    </ul>
+</div>
+                    </div>
+                <p class="card-title">BHUJANGASANA<span class="card-span">(Cobra pose)</span></p>
+            </div>
+            </div>
+        </div>
+
+
+
+        <main class="main-container">
+            <div class="card-container">
+                <!-- <p class="main-card-title">It really helps</p> -->
+                <div class="card-content">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="img/Mountain.jpg"width="350" height="400" alt=""class="card-img">
+                        <div class="card-info">
+                            <ul class="card-info-list">
+                            <li class="card-info-item">Tadasana is great for regulating the menstrual cycle in women.</li>
+                            <li class="card-info-item">It develops and activates the nerves of the entire body.</li>
+                            <li class="card-info-item">Also, getting you started, the mountain pose helps to remove lethargy from the body.</li>
+                            <li class="card-info-item">It strengthen the small muscles in feet and ankles.</li>
+                            <li class="card-info-item">It improves the clarity and mental focus.</li>
+                        </ul>
+    </div>
+    </div>
+                    <p class="card-title">Tadasana<span class="card-span">(The Mountain Pose)</span></p>
+                </div>
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="img/uttanasana.png"width="350" height="400" alt=""class="card-img">
+                        <div class="card-info">
+                            <ul class="card-info-list">
+                            <li class="card-info-item">It may help to lengthen the spine and loosen tight hamstrings.</li>
+                            <li class="card-info-item">It may reduce digestive ailments .</li>
+                            <li class="card-info-item">It stimulate your belly and abdominal muscles.</li>
+                            <li class="card-info-item">It keeps your spine solid and adaptable.</li>
+                        </ul>
+    </div>
+                    </div>
+                    <p class="card-title">Uttanasana <span class="card-span">(Standing Forward Fold Pose)</span></p>
+                </div>
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="img/Trikonasana.jpg"width="350" height="400" alt="" class="card-img">
+                        <div class="card-info">
+                            <ul class="card-info-list">
+                            <li class="card-info-item">It strengthens your leg,foot and neck situations.</li>
+                            <li class="card-info-item">It improves the alignment and stability.</li>
+                            <li class="card-info-item">It opens the hips,calves and the shoulder girdle.</li>
+                            <li class="card-info-item">It reduces the blood pressure,stress and anxiety.</li>
+                            <li class="card-info-item">It improves the function of blood through the entire body.</li>
+                        </ul>
+    </div>
+                        </div>
+                    <p class="card-title">Trikonasana<span class="card-span">(The Triangle Pose)</span></p>
+                </div>
+                </div>
+            </div>
+            <main class="main-container">
+                <div class="card-container">
+                    <div class="card-content">
+                        <div class="card">
+                            <div class="card-img-container">
+                                <img src="img/vrksasana.jpg"width="350" height="400" alt=""class="card-img">
+                                <div class="card-info">
+                                    <ul class="card-info-list">
+                                    <li class="card-info-item">It strengthen the legs.</li>
+                                    <li class="card-info-item">It improves the neuromuscular coordination.</li>
+                                    <li class="card-info-item">It enhance the concentration.</li>
+                                    <li class="card-info-item">It helps to improve the immunity.</li>
+                                    <li class="card-info-item">It builds the strength in ankles and calves.</li>
+                                </ul>
+            </div>
+            </div>
+                            <p class="card-title">Vrksasana<span class="card-span">(The tree Pose)</span></p>
+                        </div>
+                        <div class="card">
+                            <div class="card-img-container">
+                                <img src="img/halasana.jpg"width="350" height="400" alt=""class="card-img">
+                                <div class="card-info">
+                                    <ul class="card-info-list">
+                                    <li class="card-info-item">It stimulates the abdominal organs and thyroid gland.</li>
+                                    <li class="card-info-item">It helps to relieve the symptoms of menopause .</li>
+                                    <li class="card-info-item">It stretches the shoulders and spine.</li>
+                                    <li class="card-info-item">It reduces the belly fat.</li>
+                                    <li class="card-info-item">It improves the blood circulation.</li>
+                                </ul>
+            </div>
+                            </div>
+                            <p class="card-title">Halasana <span class="card-span">(Plow Pose)</span></p>
+                        </div>
+                        <div class="card">
+                            <div class="card-img-container">
+                                <img src="img/balasana.jpg"width="350" height="400" alt="" class="card-img">
+                                <div class="card-info">
+                                    <ul class="card-info-list">
+                                    <li class="card-info-item">It helps to relieve the stress and anxiety.</li>
+                                    <li class="card-info-item">It stretches and lengthens the spines.</li>
+                                    <li class="card-info-item">It relieves the constipation.</li>
+                                    <li class="card-info-item">It stretches the hips,thighs and ankles.</li>
+                                    <li class="card-info-item">It promotes the blood circulation all throughout the body .</li>
+                                </ul>
+            </div>
+                                </div>
+                            <p class="card-title">Balasana<span class="card-span">(The child Pose)</span></p>
+                        </div>
+                        </div>
+                    </div>
+                    <main class="main-container">
+                        <div class="card-container">
+                            <!-- <p class="main-card-title">It really helps</p> -->
+                            <div class="card-content">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/chkrasana.jpg"width="350" height="400" alt=""class="card-img">
+                                    <div class="card-info">
+                                        <ul class="card-info-list">
+                                        <li class="card-info-item">It strengthens the arms,shoulders and wrist.</li>
+                                        <li class="card-info-item">It stimulates nervous system.</li>
+                                        <li class="card-info-item">It helps to increases lung capacity.</li>
+                                        <li class="card-info-item">It is effective to cure thyroid disorder.</li>
+                                        <li class="card-info-item">It stretches chest,lungs,liver and kidney.</li>
+                                    </ul>
+                </div>
+                </div>
+                                <p class="card-title">CHAKRASAN<span class="card-span">(The wheel Pose)</span></p>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/shirshasana.jpg"width="350" height="400" alt=""class="card-img">
+                                    <div class="card-info">
+                                        <ul class="card-info-list">
+                                    
+                                        <li class="card-info-item">It reduced fluid retention in the legs.</li>
+                                        <li class="card-info-item">It stimulates the thyroid gland,pituitary gland and pineal gland .</li>
+                                        <li class="card-info-item">It enhance the pituitary functions.</li>
+                                        <li class="card-info-item">It helps to improved the blood flow to eyes.</li>
+                                    </ul>
+                </div>
+                                </div>
+                                <p class="card-title">SHIRSHASAN <span class="card-span">(Headstand Pose)</span></p>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="img/padmasan.jpg"width="350" height="400" alt="" class="card-img">
+                                    <div class="card-info">
+                                        <ul class="card-info-list">
+                                    
+                                        <li class="card-info-item">It stretches the ankles and legs.</li>
+                                        <li class="card-info-item">It helps to develop good posture.</li>
+                                        <li class="card-info-item">It keeps the spine straight.</li>
+                                        <li class="card-info-item">It stimulates the spine,pelvis and abdomen.</li>
+                                        <li class="card-info-item">It increases awareness and attentiveness.</li>
+                                        <li class="card-info-item">It eases menstrual discomfort and sciatica.</li>
+                                    </ul>
+                </div>
+                                    </div>
+                                <p class="card-title">PADMASANA<span class="card-span">(The lotusPose)</span></p>
+                            </div>
+                            </div>
+                        </div>
+                <div class="banner-container">
+                <div class="banner-img-container">
+                    <img src="img/yoga-pose-6.jpeg"width="850" height="400"alt=""class="banner-img">
+                </div>
+               
+
+                 <div class="banner-content-container"></div>
+        <div class="banner-content">
+        <h3 class="banner-title">Natural Environment</h3>
+        <p class="banner-desc">
+        The five elements of yoga like air,water,fire,earth and space are connected to the environment . The imbalance in any of them will cause problems for mankind . We need to preserve our earth by leading a sustainable lifestyle where the importance of yoga is known to everyone . Yoga in nature is pretty much exactly what it sounds like-it's taking your yoga practice out of the sweaty studio and into nature . 
+            </p>
+             <a href="#" class="banner-cta">Learn more</a>
+        </div>
+        </div>
+        </div>
+        <div class="banner-container">
+        <div class="banner-img-container">
+        <img src="img/yoga-pose-7.jpeg"width="850" height="400"alt=""class="banner-img">
+        </div>
+        <div class="banner-content-container">
+        <div class="banner-content">
+        <h3 class="banner-title">Friendly Environment</h3>
+        <p class="banner-desc">     
+        The eco-friendly practices that are supposed to reduce pollution and support nature are referred to as environment -friendly practice . Reduce ,reuse and recycle are the three resources that are meant to support nature . Plastic bags are non biodegradable and cause soil erosin and water pollution . It means reduces the burden on the environment and harm to its inhabitants . 
+        </p>
+        <a href="#" class="banner-cta">Learn more</a>
+        </div>
+        </div>
+        </div>
+         <div class="contact-container">
+            <div class="contact-info-container">
+            <table class="Contact-info">
+                <tr>
+                    <td><i class="fas fa-envelope"></i></td>
+                    <td>bsharma@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-phone-alt "></i></td>
+                    <td>6230711370<br>7018756370</td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-map-marker-alt"></i></td>
+                    <td>lower cemetery <br> sanjauli,shimla <br> (171006)</td>
+                </tr>
+            </table>
+            </div>
+            <div class ="contact-form-container"></div>
+            <form action="#" class="contact-form">
+            <div class="contact-input-container">
+                <input type="text"class="input"
+                placeholder="name">
+        </div>
+            <div class="contact-input-container">
+                <input type="email"class="input"
+                placeholder="email">
+                    </div>
+            <div class="contact-input-container">
+                <textarea class="msg-input" cols="30" rows="10"
+                placeholder="your message"></textarea>
+            </div>
+            <div class="contact-input-container">
+                <input type="submit"class="input" value="send">
+                </div>
+            </form>
+            </div>
+        </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54674.136272704774!2d77.11782157139346!3d31.078212851099543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390578e3e35d6e67%3A0x1f7e7ff6ff9f54b7!2sShimla%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1695625877591!5m2!1sen!2sin" width="1550" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="testimonial-container">
+ <div class="user-container" id="user-1"></div>
+ <div class="user-img-container">
+     <center> <img src="img/hey3.jpg"height="200" width="170"border="5" style="border-color:red"> </center>
+</div>
+ <div class="user-info">
+    <center><font color=red size=7><u><b><p class="user-name">Vani Sharma</p></b></u></font></center>
+ <center><font color="blue" size=5><b> <p class="user-message">Vani Sharma is a fitness and wellness professional who leads group classes in yoga . She teach students how to perform the various stretching poses , practice meditation and promote mindfulness in addition to overall wellbeing.</b></font> </p></center>
+</div>
+</div>
+<div class="user-container" id="user-2"></div>
+<div class="user-img-container">
+  <center> <img src="img/hey2.jpg"height="200" width="200" border="5" style="border-color:red"></center>
+</a>
+</div>
+<div class="user-info">
+    <center><font color=red size=7><u><b><p class="user-name">Lovely Chauhan</b></p></u></font></center>
+   <center><font color="blue" size=5> <b><p class="user-message">Lovely Chauhan is the nutritionist who leads you about your diet . She teach students about the good diet and good healty that is very important with the yoga and physical exercises . Nousishing your body with the right foods can enhance your energy levels .</b></font> </p></center>
+</div>
+</div>
+
+    </main>
+    
+
 </head>
 <body>
+   <center><font color="mehroon"> <h1>LOGIN FORM</h1></font></center>
+    <button onclick="document.getElementById('id01').style.display='block'"
+    style="width:aut;">LOGIN</button>
+    <div id="id01" class="modal">
+        <form class="modal-content animate"
+        action="/action_page.php"
+        method="post">
+    <div class ="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="close modal">&times;</span>
+        <img src="img/login1.png"
+        alt="avatar" class="avatar">
+        </div>
+        <div class="container">
+            <label for="uname">
+                <b>Username</b>
+            </label>
+            <input type="text"
+            placeholder="Enter Username"
+            name="uname  " required>                            
+            <label for="psw"><b>Password</b></label>
+            <input type="password"
+            placeholder="Enter password"
+            name="psw" required>
+            <button type="submit">LOGIN</button>
+            <label>
+                <input type="checkbox"
+                checked="checked" name="remember">
+               Remember me 
+            </label>
+         </div>
+         <div class="container"
+         style="background-color: #F1F1F1">
+        <button type="button"
+        onlick="document.getElementById('id01').style.display='none'"
+        class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">Password?</a></span>
+     </div>
 
-<!-- Navigation -->
-<nav>
-    <div class="logo">BS</div>
-    <div class="menu">&#9776;</div>
-</nav>
- <!-- Menu Items -->
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        
-        <li><a href="about.html">About</a></li>
-        <li><a href="skill.html">Skills</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        
-    </ul>
-</nav>
- 
-<!-- Hero Section -->
-<section class="hero">
-    <h3>Hello, I'm</h3>
-    <h1>Bharti Sharma</h1>
-    <h2>MCA Student </h2>
-
-    <p><b>
-        Passionate about creating clean, simple and user-friendly websites.  
-        Learning new skills every day and building a strong foundation.</b>
-    </p>
-
-    <div class="buttons">
-        <a href="#projects" class="btn blue">View My Work</a>
-        <a href="#contact" class="btn green">Get In Touch</a>
+    </div></form>
     </div>
+    <script>
+        var modal=document.getElementById('id01');
+        window.onclick=function(event){
+            if(event.target==modal){
+                modal.style.display="none";
+            }
+        }
 
-    <div class="avatar">
-        <img src="hy.JPG" alt="Profile ">
-    </div>
-</section>
-<script src="script.js"></script>
-<section id="about" style="text-align: center;">
-    <h1 style="color: rgb(5, 5, 100);">About Me</h1>
-    <p><b>
-        Hailing from the scenic hills of Shimla, I’m Bharti Sharma, an MCA student at Himachal Pradesh University with a CGPA of 8.22. I have a deep passion for coding and creating innovative solutions, and I also cherish spending time in nature and with my family. These moments of inspiration and balance keep me motivated and eager to learn and grow every day.
-    </b></p>
-</section>
-<section id="skills" style="text-align: center; font-family: Arial, sans-serif;">
-    <!-- Section Heading -->
-    <h1 style="color:rgb(5, 5, 100); margin-bottom: 40px; font-weight: bold; font-size: 36px;">Skills</h1>
-
-    <!-- Web Development -->
-    <div style="display: inline-block; background-color: #f0f0f0; padding: 20px; margin: 10px; border-radius: 12px; width: 260px; vertical-align: top; border: 2px solid #000000;">
-        <h3 style="text-decoration: underline; margin-bottom: 15px; color: #3B82F6; font-weight: bold; font-size: 22px;">Web Development</h3>
-        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-            <span style="background-color: #FFD6E0; color: #000000; padding: 10px; width: 200px; text-align: center; border-radius: 8px; font-weight: bold; border: 1px solid #ffb3c6;">HTML</span>
-            <span style="background-color: #FFD6E0; color: #000000; padding: 10px; width: 200px; text-align: center; border-radius: 8px; font-weight: bold; border: 1px solid #ffb3c6;">CSS</span>
-            <span style="background-color: #FFD6E0; color: #000000; padding: 10px; width: 200px; text-align: center; border-radius: 8px; font-weight: bold; border: 1px solid #ffb3c6;">JavaScript (Basics)</span>
+    </script>
+<footer class="footer">
+     <!-- <div class="news letter">
+        <p class="news-letter-title">Contact</p>
+        <form action="#" class="news-letter-form">
+            <input type="email" id="news-letter-email"
+        placeholder="enter your email..">
+        <input type="submit" id="news-letter-submit">
+        </form>
+    </div>  -->
+    <div class="footer-border"></div>
+    <div class="footer-content-container">
+        <div class="footer-content">
+            <a href="#" class="link footer-logo">yoga</a>
+            <p class="company-desc">yoga improves the strength,balance and flexibility . Slow movements increase blood flow and warm up muscles,while holding the pose can build strength . Yoga is the practice that connects the body,breath,and mind . </p>
+       <table class="footer-contact-info">
+            <tr>
+            <td><i class="fas fa-envelope"></i></td>
+            <td>bsharma@gmail.com</td>
+        </tr>
+        <tr>
+            <td><i class="fas fa-phone-alt"></i></td>
+            <td>6230711370<br>7018756370</td>
+        </tr>
+        <tr>
+            <td><i class="fa fa-map-marker-alt"></i></td>
+            <td>lower cemetery <br> sanjauli,shimla <br> (171006)</td>
+        </tr>  
+       </table>
         </div>
     </div>
+     <!-- <div class="footer-nav-container">
+        <p class="footer-title">useful links</p>
+        <nav class="footer-nav">
+            <ul class="footer-nav-list">
+                <li class="footer-nav-item">
+                    <a href="#" class="footer-nav-link link">Home</a>
+                </li>
+                <li class="footer-nav-item">
+                    <a href="classes.html" class="footer-nav-link link">Classes</a>
+                </li>
+                <li class="footer-nav-item">
+                    <a href="about.html" class="footer-nav-link link">About us</a>
+                </li>
+                <li class="footer-nav-item">
+                    <a href="contact.html" class="footer-nav-link link">Contact us</a>
+                </li>
+                <li class="footer-nav-item">
+                    <a href="blog.html" class="footer-nav-link link">Blogs</a>
+                        </li>
+            </ul>
+            </nav>  -->
+      
 
-    <!-- Tools -->
-    <div style="display: inline-block; background-color: #f0f0f0; padding: 20px; margin: 10px; border-radius: 12px; width: 260px; vertical-align: top; border: 2px solid #000000;">
-        <h3 style="text-decoration: underline; margin-bottom: 15px; color: #F59E0B; font-weight: bold; font-size: 22px;">Tools</h3>
-        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-            <span style="background-color: #FFD6E0; color: #000000; padding: 10px; width: 200px; text-align: center; border-radius: 8px; font-weight: bold; border: 1px solid #ffb3c6;">VS Studio Code</span>
-            <span style="background-color: #FFD6E0; color: #000000; padding: 10px; width: 200px; text-align: center; border-radius: 8px; font-weight: bold; border: 1px solid #ffb3c6;">Browser Developer Tools</span>
-        </div>
+           <p class="footer-title">useful links</p>
+            <div class="footer-nav-container">
+              
+                <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="classes.html" class="nav-link link">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link link">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link link">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link link">Blogs</a>
+                    
+                    </li> 
+                    <!-- <li class="nav-item">
+                        <a href="#" class="nav-link link"><i class ="fas fa-search"></i></a>
+                    </li>  -->
+                \ </ul>
+                </nav>
+     </div>
+</div>
+</div>
     </div>
-
-    <!-- Productivity -->
-    <div style="display: inline-block; background-color: #f0f0f0; padding: 20px; margin: 10px; border-radius: 12px; width: 260px; vertical-align: top; border: 2px solid #000000;">
-        <h3 style="text-decoration: underline; margin-bottom: 15px; color: #10B981; font-weight: bold; font-size: 22px;">Productivity</h3>
-        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-            <span style="background-color: #FFD6E0; color: #000000; padding: 10px; width: 200px; text-align: center; border-radius: 8px; font-weight: bold; border: 1px solid #ffb3c6;">Microsoft Office (Word, Excel, PowerPoint)</span>
-        </div>
-    </div>
-
-    <!-- Soft Skills -->
-    <div style="display: inline-block; background-color: #f0f0f0; padding: 20px; margin: 10px; border-radius: 12px; width: 260px; vertical-align: top; border: 2px solid #000000;">
-        <h3 style="text-decoration: underline; margin-bottom: 15px; color: #F87171; font-weight: bold; font-size: 22px;">Soft Skills</h3>
-        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-            <span style="background-color: #FFD6E0; color: #000000; padding: 10px; width: 200px; text-align: center; border-radius: 8px; font-weight: bold; border: 1px solid #ffb3c6;">Team Work</span>
-            <span style="background-color: #FFD6E0; color: #000000; padding: 10px; width: 200px; text-align: center; border-radius: 8px; font-weight: bold; border: 1px solid #ffb3c6;">Communication</span>
-            <span style="background-color: #FFD6E0; color: #000000; padding: 10px; width: 200px; text-align: center; border-radius: 8px; font-weight: bold; border: 1px solid #ffb3c6;">Adaptable</span>
-        </div>
-    </div>
-
-</section>
-<section id="education-experience" style="text-align: center; font-family: Arial, sans-serif;">
-
-    <!-- Education Heading -->
-    <h1 style="color: #1E3A8A; margin-bottom: 30px; font-weight: bold; font-size: 36px;">Educational Qualifications</h1>
     
-    <!-- Master of Computer Applications -->
-    <div style="display: inline-block; background-color: #f0f0f0; padding: 20px; margin: 15px; border-radius: 12px; width: 300px; border: 2px solid #000;">
-        <h3 style="color: brown; font-weight: bold; font-size: 22px; margin-bottom: 10px;">Master of Computer Applications</h3>
-        <p style="font-weight: bold;">Himachal Pradesh University, Shimla</p>
-        <p><b>2024 – Present | CGPA: 8.22</b></p>
-    </div>
+    </footer> 
+    <!-- Remove the container if you want to extend the Footer to full width. -->
 
-    <!-- Bachelor of Computer Applications -->
-    <div style="display: inline-block; background-color: #f0f0f0; padding: 20px; margin: 15px; border-radius: 12px; width: 300px; border: 2px solid #000;">
-        <h3 style="color: orangered; font-weight: bold; font-size: 22px; margin-bottom: 10px;">Bachelor of Computer Applications</h3>
-        <p style="font-weight: bold;">Rajkiya Kanya Mahavidhyalya  College, Shimla </p>
-        <p><b>2021 – 2024 | CGPA: 7.81</b></p>
-        
-    </div>
-
-    <!-- School -->
-    <div style="display: inline-block; background-color: #f0f0f0; padding: 20px; margin: 15px; border-radius: 12px; width: 300px; border: 2px solid #000;">
-        <h3 style="color :green; font-weight: bold; font-size: 22px; margin-bottom: 10px;">Govt Model Girls Senior Secondary School, Portmore</h3>
-        <p><b>Completed 10th in 2019 and 12th in 2021.</b></p>
-    </div>
-
-    <!-- Experience Heading -->
-    <h1 style="color: #1E3A8A; margin: 40px 0 30px 0; font-weight: bold; font-size: 36px;">Professional Experience</h1>
-    
-    <!-- Fresher Experience Box -->
-    <div style="display: inline-block; background-color: #f0f0f0; padding: 20px; margin: 15px; border-radius: 12px; width: 300px; border: 2px solid #000;">
-        <h2 style="color:blueviolet; font-weight: bold; font-size: 22px; margin-bottom: 10px;">Fresher</h2>
-        <p style="font-weight: bold;">No formal work experience yet</p>
-        <p><b>Completed projects and training in Web Development using HTML, CSS & basic JavaScript.</b></p>
-        <p><b>Collaborated with classmates on mini-projects to build practical skills.</b></p>
-    </div>
-
-</section>
-<section id="contact" style="text-align: center; font-family: Arial, sans-serif; margin-top: 50px;">
-
-    <!-- Contact Heading -->
-    <h1 style="color: #1E3A8A; font-weight: bold; font-size: 36px; margin-bottom: 30px;">Contact Information</h1>
-
-    <!-- Contact Details Box -->
-    <div style="display: inline-block; background-color: #f0f0f0; padding: 30px; border-radius: 12px; width: 400px; border: 2px solid #000; text-align: left;">
-
-        <!-- Email -->
-        <p style="font-size: 18px; margin: 15px 0;"><b>
-            <span style="color: #3B82F6; font-weight: bold; margin-right: 10px;">📧</span>
-            bs9954598@gmail.com
-        </b></p>
-
-        <!-- Phone -->
-        <p style="font-size: 18px; margin: 15px 0;"><b>
-            <span style="color: #3B82F6; font-weight: bold; margin-right: 10px;">📞</span>
-            +91 6230711370
-        </b></p>
-
-        <!-- Location -->
-        <p style="font-size: 18px; margin: 15px 0;"><b>
-            <span style="color: #3B82F6; font-weight: bold; margin-right: 10px;">📍</span>
-            Shimla, Himachal Pradesh, India
-        </b></p>
-
-    </div>
-
-</section>
-
-</body>
-</html>
+</head>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+     </body>
+    </html>
